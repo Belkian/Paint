@@ -29,10 +29,11 @@ function clickerSouris(){
 
 
 
-  BtnTaillePinceau.forEach(TaillePinceau => addListenerForEachButton(TaillePinceau));
+BtnTaillePinceau.forEach(TaillePinceau => addListenerForEachButton(TaillePinceau));
 function addListenerForEachButton(TaillePinceau) {
-  TaillePinceau.addEventListener('click', () => PinceauTaille(TaillePinceau));
+    TaillePinceau.addEventListener('click', () => PinceauTaille(TaillePinceau));
 }
+
 function PinceauTaille(TaillePinceau){
     if(TaillePinceau.classList.contains('rond')){
         radius = 50;
@@ -51,20 +52,12 @@ function PinceauTaille(TaillePinceau){
     return size
 }
 
-
-// function ajoutPalette(){ 
-//     listCouleur.innerHTML += `<li style="backgound-color:${inputColor.value}"></li>`;
-// }
-
-
 function Paint(){ 
 if(mouseDownActive = true){
     pageblanche.innerHTML += `<div class="px1" style="left:${x-(size/2)}px ; top:${y-(size/2)}px ; background-color: ${inputColor.value} ; height:${size}px ; width: ${size}px ; border-radius: ${radius}px"></div>`;
     }
 }
-
     
 function Reset(){
     pageblanche.innerHTML = '';
 }
-
